@@ -19,7 +19,6 @@ thingsRouter
   .all(requireAuth)
   .all(checkThingExists)
   .get((req, res) => {
-    console.log(req)
     res.json(ThingsService.serializeThing(res.thing))
   })
 
